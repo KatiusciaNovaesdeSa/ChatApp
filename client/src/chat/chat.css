@@ -1,0 +1,105 @@
+#sub{
+    width: 100%;
+    background-color:  rgb(226, 34, 98) !important;
+    color: lightpink !important;
+    margin-bottom:0px !important;
+}
+#sub2{
+    background-color: rgb(226, 34, 98);
+    color: lightpink !important;
+  
+}
+
+#outlined-name{
+    margin-bottom:0px !important;
+}
+.chatNav{
+    height:100vh;  
+}
+.chat{
+    height:100vh;
+}
+.text-center{
+    text-align:center
+}
+.text-left{
+    text-align:left
+}
+.border{
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.mt{
+    margin-top:10px
+}
+.m-2{
+     margin:25px !important
+}
+.mt-4{
+    margin-top:25px
+}
+.p-2{
+    padding:20px !important
+}
+.pb{
+    padding-bottom: 10px !important
+}
+.text-white{
+    color:white !important
+}
+.text-dark{
+    color: black !important;
+    text-decoration: none!important
+}
+
+.border-none{
+    border:none !important
+}
+
+.messages{
+    width:100%;
+}
+.mb-4{
+    margin-bottom:20px !important
+    
+}
+
+
+
+.scroll{ 
+    width: 100%!important;
+    max-height: 500px!important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow-y: scroll !important;
+  }
+
+  .scrollRooms{ 
+    width: 100%!important;
+    max-height: 100px!important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow-y: scroll !important;
+  }
+
+.rooms{
+    cursor: pointer;
+}
+.rooms:hover {
+    background-color:lightpink;
+}
+
+::placeholder {
+    color:black;
+
+  }
+  .onlineIcon {
+    margin-right: 5%;
+  }
+
+
+
+
+
+  

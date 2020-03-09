@@ -1,0 +1,40 @@
+::placeholder {
+  color: palevioletred !important;
+}
+.card {
+  height:400px !important;
+ 
+ } 
+
+.label {
+  color: black !important;
+}
+
+.divs {
+    transition: background-color .2s !important;
+    text-decoration: none !important;
+    color: black !important
+  }
+  
+.divs:hover {
+    background-color: lightpink !important;
+    color: white !important;
+    cursor: pointer;
+  }
+ 
+  .ml{
+    margin-left: 10px
+  }
+
+  .p{
+    padding: 20px !important
+  }
+  .text{
+    font-size: 20px;
+
+  }
+  .m{
+    margin: 15px
+  }
+
+  

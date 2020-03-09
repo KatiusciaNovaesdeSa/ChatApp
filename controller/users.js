@@ -1,0 +1,95 @@
+var users = require('../model/Users_model')
+
+exports.registerUsers = async function (req, res) {
+    try{
+        await users.create({
+            user:req.body.user,
+            date:req.body.date,
+            time: req.body.time,
+            room: req.body.room,
+            connected: req.body.connected
+        })
+        res.status(200).send({
+            message: "Done!"
+        })}
+        catch(error){
+            res.status(404).send({
+                message: req.body.user,
+                error:error.message
+            })
+        }
+        
+    }
+
+
+
+exports.editOne = async function (req, res) {
+    try {
+        await users.updateOne({user:req.params.user}, {
+            connected: req.body.connected
+        })
+        res.status(200).send({
+            message: "user changed"
+        })
+    } catch (error) {
+        res.status(404).send({
+            message: "Error to edit",
+            error: error.message
+        })
+    }
+}
+
+exports.editRoom = async function (req, res) {
+    try {
+        await users.updateOne({user:req.params.user}, {
+            room: req.body.room
+        })
+        res.status(200).send({
+            message: "Room changed"
+        })
+    } catch (error) {
+        res.status(404).send({
+            message: "Error to edit",
+            error: error.message
+        })
+    }
+}
+
+
+exports.getOneUser = async function(req,res){
+    try{
+        let getUsers = await users.findOne({email:req.params.email})
+        res.status(200).send(getUsers)
+    }catch(error){
+        res.status(400).send({
+            message:"no data",
+            error:error.message
+
+        })
+    }
+}
+exports.getUserByRoom = async function(req,res){
+    try{
+        let getUsers = await users.find({room:req.params.room})
+        res.status(200).send(getUsers)
+    }catch(error){
+        res.status(400).send({
+            message:"no data",
+            error:error.message
+        })
+    }
+}
+
+
+exports.getusers = async function(req,res){
+    try{
+        let getUsers = await users.find()
+        res.status(200).send(getUsers)
+    }catch(error){
+        res.status(400).send({
+            message:"no data",
+            error:error.message
+
+        })
+    }
+}

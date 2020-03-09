@@ -2,7 +2,7 @@ var request = require('request')
 
   exports.setTrue =  function(user){ 
         request.put({
-          url: `http://localhost:5000/api/users/${user}`, 
+          url: `/api/users/${user}`, 
           json: {
             connected:true
           }
@@ -17,7 +17,7 @@ var request = require('request')
 
   exports.setRoom = function(user,roomNumber){
     request.put({
-      url: `http://localhost:5000/api/users/room/${user}`, 
+      url: `/api/users/room/${user}`, 
       json: {
         room:roomNumber
       }
@@ -32,7 +32,7 @@ var request = require('request')
 
   exports.setFalse =  function(user){ 
     request.put({
-      url: `http://localhost:5000/api/users/${user}`, 
+      url: `/api/users/${user}`, 
       json: {
         connected:false
       }
@@ -48,7 +48,7 @@ var request = require('request')
 
 exports.addLog =  function(u,d,t,e){ 
   request.post({
-    url: `http://localhost:5000/api/eventLog`, 
+    url: `/api/eventLog`, 
     json: {
         user : u,
         date: d,
@@ -66,7 +66,7 @@ exports.addLog =  function(u,d,t,e){
 
 exports.addHistory = function(u,re,m,d,t,r){
   request.post({
-    url: `http://localhost:5000/api/history`, 
+    url: `/api/history`, 
     json: {
         sender : u,
         reciever:re,
@@ -86,7 +86,7 @@ exports.addHistory = function(u,re,m,d,t,r){
 
 exports.login = function(e,p){
   request.post({
-    url: `http://localhost:5000/api/login`, 
+    url: `/api/login`, 
     json: {
         email : e,
         password:p

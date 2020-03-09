@@ -4,13 +4,13 @@ export const API = {
   frontEnd: {
     rooms: {
       get: function () {
-        return axios.get('http://localhost:5000/api/rooms')
+        return axios.get('/api/rooms')
       },
       getOne:function(room){
-        return axios.get(`http://localhost:5000/api/rooms/${room}`)
+        return axios.get(`/api/rooms/${room}`)
       },
       editOne:function(room,name,id,createdDate,editDate,status){
-        return axios.put(`http://localhost:5000/api/rooms/${room}`,{
+        return axios.put(`/api/rooms/${room}`,{
           id:id,
           name:name,
           createdDate:createdDate,
@@ -19,10 +19,10 @@ export const API = {
         })
       },
       delete: function(room){
-        return axios.post(`http://localhost:5000/api/rooms/${room}`)
+        return axios.post(`/api/rooms/${room}`)
       },
       create: function(name,id,createdDate,editDate,status){
-        return axios.post(`http://localhost:5000/api/rooms`,{
+        return axios.post(`/api/rooms`,{
           id:id,
           name:name,
           createdDate:createdDate,
@@ -33,7 +33,7 @@ export const API = {
     },
     eventLogs:{
       post:function(type,user,date,time,eventID,PPID){
-        return axios.post('http://localhost:5000/api/eventLog',{
+        return axios.post('/api/eventLog',{
           type:type,
           user:user,
           date:date,
@@ -45,10 +45,10 @@ export const API = {
     },
     user:{
       get:function(room){
-        return axios.get(`http://localhost:5000/api/users/${room}`)
+        return axios.get(`/api/users/${room}`)
     },
       post:function(user,date,time,room){
-        return axios.post('http://localhost:5000/api/users',{
+        return axios.post('/api/users',{
           user:user,
           date:date,
           time:time,
@@ -57,19 +57,19 @@ export const API = {
         })
       },
       put:function(user){
-        return axios.put(`http://localhost:5000/api/users/${user}`,{
+        return axios.put(`/api/users/${user}`,{
           connected:false
         })
       },
       putRoom:function(user,room){
-        return axios.put(`http://localhost:5000/api/users/room/${user}`,{
+        return axios.put(`/api/users/room/${user}`,{
           room:room
         })
       }
     },
     messages:{
       post:function(id,sender,reciever,message,date,time,room){
-        return axios.post('http://localhost:5000/api/history',{
+        return axios.post('/api/history',{
           id:id,
           sender:sender,
           reciever:reciever,

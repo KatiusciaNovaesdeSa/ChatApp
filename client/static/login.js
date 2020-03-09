@@ -4,7 +4,7 @@ $("#btn").click(function(){
     const myHeaders = new Headers();
    myHeaders.append('Content-Type', 'application/json');
    myHeaders.append('x-access-token', localStorage.getItem("token"));
-  await fetch('http://localhost:5000/api/me', {
+  await fetch('/api/me', {
     method: 'GET',
     headers: myHeaders
   }).then(res => res.json())//response type
@@ -30,7 +30,7 @@ var password =$("#password").val()
         "password":password
 }	;
     
-     fetch('http://localhost:5000/api/login', {
+     fetch('/api/login', {
   method: 'POST',
   headers: {
     Accept: 'application/json',

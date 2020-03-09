@@ -56,7 +56,7 @@
 
 }	;
 
-    fetch('http://localhost:5000/api/register', {
+    fetch('/api/register', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

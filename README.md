@@ -9,7 +9,6 @@ cd client
 npm start
 
 => server <=
-cd server
 npm start
 
 browser: localhost:3000 
